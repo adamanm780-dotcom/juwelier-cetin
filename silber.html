@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="theme-color" content="#faf6ec" />
+<title>Silberankauf · Juwelier Cetin · Dillenburg</title>
+<meta name="description" content="Silberankauf bei Juwelier Cetin in Dillenburg: Besteck, Münzen, Barren und Schmuck aller Feingehalte von 800 bis 999. Transparente Prüfung, Bewertung zum Tageskurs, sofortige Auszahlung." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Italiana&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="styles.css" />
+<link rel="icon" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='74' font-size='86' font-family='serif' fill='%23c9a96a'>C</text></svg>" />
+
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+    "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+  }
+}
+</script>
+</head>
+<body>
+
+<!-- ───────── NAV ───────── -->
+<header class="nav is-scrolled" id="nav">
+  <div class="nav__inner">
+    <a class="nav__brand" href="index.html" aria-label="Zurück zur Startseite">
+      <span class="nav__brand-mark">C</span>
+      <span class="nav__brand-word">Juwelier&nbsp;Cetin</span>
+    </a>
+
+    <nav class="nav__links" aria-label="Hauptnavigation">
+      <a href="index.html#haus">Das Haus</a>
+      <a href="index.html#leistungen">Leistungen</a>
+      <a href="gold.html">Gold</a>
+      <a href="silber.html" aria-current="page" class="is-active">Silber</a>
+      <a href="index.html#diamant">Diamanten</a>
+      <a href="index.html#besuch">Besuch</a>
+    </nav>
+
+    <a class="nav__cta" href="#kontakt">
+      <span>Termin</span>
+      <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M1 7h11M8 3l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+
+    <button class="nav__burger" id="burger" aria-label="Menü öffnen" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+  </div>
+
+  <div class="nav__sheet" id="sheet" aria-hidden="true">
+    <a href="index.html#haus">Das Haus</a>
+    <a href="index.html#leistungen">Leistungen</a>
+    <a href="gold.html">Gold</a>
+    <a href="silber.html">Silber</a>
+    <a href="index.html#diamant">Diamanten</a>
+    <a href="index.html#besuch">Besuch</a>
+    <a class="nav__sheet-cta" href="#kontakt">Termin vereinbaren</a>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ───────── HERO SPLIT ───────── -->
+<section class="sub-hero sub-hero--silver" aria-label="Silberankauf">
+  <div class="sub-hero__grid">
+
+    <div class="sub-hero__text">
+      <a class="breadcrumb reveal" href="index.html">
+        <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M7 2 3 6l4 4" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span>Juwelier Cetin</span>
+      </a>
+      <p class="eyebrow reveal" data-delay="80">Ankauf · Edelmetall</p>
+      <h1 class="sub-hero__title reveal" data-delay="160">
+        Ihr Silber.<br/>
+        <em>Sauber</em> bewertet.
+      </h1>
+      <p class="sub-hero__lead reveal" data-delay="240">
+        Besteck, Münzen, Barren oder Schmuck — wir prüfen vor Ihren Augen, rechnen
+        nach Tageskurs und machen ein Angebot, das Bestand hat. Auch feinsten
+        Stücken geben wir die Aufmerksamkeit, die sie verdienen.
+      </p>
+
+      <div class="sub-hero__facts reveal" data-delay="320">
+        <div><strong>800 – 999</strong><span>Alle Feingehalte</span></div>
+        <div><strong>Tageskurs</strong><span>Transparent bewertet</span></div>
+        <div><strong>Sofort</strong><span>Barauszahlung</span></div>
+      </div>
+
+      <div class="sub-hero__ctas reveal" data-delay="400">
+        <a class="btn btn--primary" href="#kontakt"><span>Termin vereinbaren</span>
+          <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M1 8h12M9 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a class="btn btn--ghost" href="tel:+492771261005"><span>02771 · 261 005</span></a>
+      </div>
+    </div>
+
+    <div class="sub-hero__stage reveal" data-delay="120">
+      <div class="bar3d" id="bar3d" aria-hidden="true"></div>
+      <span class="sub-hero__halo sub-hero__halo--silver" aria-hidden="true"></span>
+      <span class="sub-hero__hint">Drag zum Drehen</span>
+    </div>
+
+  </div>
+</section>
+
+<!-- divider -->
+<div class="divider reveal" aria-hidden="true">
+  <img src="assets/dividing.png" alt="" />
+</div>
+
+<!-- ───────── WAS WIR ANKAUFEN ───────── -->
+<section class="categories" id="ankauf">
+  <header class="section-head">
+    <p class="eyebrow reveal">Kategorien</p>
+    <h2 class="section-title reveal" data-delay="90">
+      Was wir <em>ankaufen</em>.
+    </h2>
+  </header>
+
+  <div class="cats__grid">
+    <article class="cat reveal" data-delay="120">
+      <span class="cat__mark">Ag</span>
+      <h3>Besteck</h3>
+      <p>Tafelsilber, Bestecke, Kaffee- und Teeservices, Kerzenleuchter, Schalen — einzeln oder komplette Garnituren.</p>
+    </article>
+    <article class="cat reveal" data-delay="180">
+      <span class="cat__mark">◎</span>
+      <h3>Münzen</h3>
+      <p>Maple Leaf, Wiener Philharmoniker, Libertad, historische Taler und Kursmünzen mit Silbergehalt.</p>
+    </article>
+    <article class="cat reveal" data-delay="240">
+      <span class="cat__mark">▮</span>
+      <h3>Barren</h3>
+      <p>Gramm-, Unzen- und Kilo­barren anerkannter Hersteller. Geprägt wie gegossen.</p>
+    </article>
+    <article class="cat reveal" data-delay="300">
+      <span class="cat__mark">◇</span>
+      <h3>Schmuck</h3>
+      <p>Ringe, Ketten, Armbänder, Broschen — auch angelaufen, beschädigt oder einzeln.</p>
+    </article>
+    <article class="cat reveal" data-delay="360">
+      <span class="cat__mark">⌇</span>
+      <h3>Altsilber</h3>
+      <p>Einzelteile, Bruch, Schmelzsilber. Wir zahlen fair nach Feingehalt und Tagespreis.</p>
+    </article>
+    <article class="cat reveal" data-delay="420">
+      <span class="cat__mark">★</span>
+      <h3>Nachlässe</h3>
+      <p>Diskrete Sichtung ganzer Sammlungen und Erbstücke — mit Ruhe, Respekt und Sachverstand.</p>
+    </article>
+  </div>
+
+  <div class="alloys reveal" data-delay="200">
+    <p class="alloys__label">Feingehalte</p>
+    <ul>
+      <li><strong>800</strong><span>Tafelsilber</span></li>
+      <li><strong>835</strong><span>Klassiker</span></li>
+      <li><strong>900</strong><span>Münzsilber</span></li>
+      <li><strong>925</strong><span>Sterling</span></li>
+      <li><strong>935</strong><span>Britannia</span></li>
+      <li><strong>999</strong><span>Feinsilber</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- divider -->
+<div class="divider reveal" aria-hidden="true">
+  <img src="assets/dividing.png" alt="" />
+</div>
+
+<!-- ───────── PROZESS ───────── -->
+<section class="process">
+  <header class="section-head section-head--center">
+    <p class="eyebrow reveal">So läuft ein Ankauf</p>
+    <h2 class="section-title reveal" data-delay="90">
+      Vier Schritte,<br/>ohne <em>Überraschung</em>.
+    </h2>
+  </header>
+
+  <ol class="process__steps">
+    <li class="reveal" data-delay="120">
+      <span class="process__num">01</span>
+      <h3>Sichtung</h3>
+      <p>Sie zeigen uns, was Sie haben — wir sichten in Ruhe und erklären, was wir sehen. Ohne Eile, ohne Druck.</p>
+    </li>
+    <li class="reveal" data-delay="200">
+      <span class="process__num">02</span>
+      <h3>Prüfung</h3>
+      <p>Punze, Säuretest und — wenn nötig — Röntgen­fluoreszenz. Der Feingehalt wird vor Ihren Augen bestimmt.</p>
+    </li>
+    <li class="reveal" data-delay="280">
+      <span class="process__num">03</span>
+      <h3>Bewertung</h3>
+      <p>Wir wiegen auf geeichter Waage, rechnen den aktuellen Tageskurs an und legen unser Angebot offen.</p>
+    </li>
+    <li class="reveal" data-delay="360">
+      <span class="process__num">04</span>
+      <h3>Auszahlung</h3>
+      <p>Sind Sie einverstanden, zahlen wir auf Wunsch sofort in bar aus oder überweisen taggleich.</p>
+    </li>
+  </ol>
+</section>
+
+<!-- ───────── TRUST / CLAIM ───────── -->
+<section class="claim">
+  <div class="claim__inner">
+    <p class="claim__eyebrow reveal">Unser Versprechen</p>
+    <blockquote class="claim__quote reveal" data-delay="100">
+      „Auch wenn es Silber ist —<br/>wir prüfen es, als wäre es <em>Gold</em>."
+    </blockquote>
+    <p class="claim__meta reveal" data-delay="200">Mehmet Cetin &nbsp;·&nbsp; Inhaber, Juwelier Cetin</p>
+  </div>
+</section>
+
+<!-- divider -->
+<div class="divider reveal" aria-hidden="true">
+  <img src="assets/dividing.png" alt="" />
+</div>
+
+<!-- ───────── KONTAKT ───────── -->
+<section class="visit" id="kontakt">
+  <div class="visit__text">
+    <p class="eyebrow reveal">Kontakt</p>
+    <h2 class="section-title reveal" data-delay="90">Bringen Sie Ihr <em>Silber</em><br/>vorbei.</h2>
+    <p class="visit__lead reveal" data-delay="160">
+      Kommen Sie in der Hauptstraße vorbei oder rufen Sie an — wir nehmen uns Zeit,
+      prüfen gründlich und machen Ihnen ein faires Angebot.
+    </p>
+
+    <div class="visit__actions reveal" data-delay="220">
+      <a class="btn btn--primary" href="tel:+492771261005"><span>02771&nbsp;·&nbsp;261 005</span></a>
+      <a class="btn btn--ghost" href="mailto:info@juwelier-cetin.de"><span>Nachricht schreiben</span></a>
+    </div>
+  </div>
+
+  <aside class="visit__card reveal" data-delay="280">
+    <div class="visit__row">
+      <dt>Adresse</dt>
+      <dd>Hauptstraße 50<br/>35683 Dillenburg</dd>
+    </div>
+    <div class="visit__row">
+      <dt>Öffnungszeiten</dt>
+      <dd>
+        Mo – Fr&nbsp;&nbsp; 10:00 – 13:00<br/>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 14:00 – 18:00<br/>
+        Samstag&nbsp; 10:00 – 13:00
+      </dd>
+    </div>
+    <div class="visit__row">
+      <dt>Telefon</dt>
+      <dd><a href="tel:+492771261005">02771 · 261 005</a></dd>
+    </div>
+    <div class="visit__row">
+      <dt>E-Mail</dt>
+      <dd><a href="mailto:info@juwelier-cetin.de">info@juwelier-cetin.de</a></dd>
+    </div>
+  </aside>
+</section>
+
+</main>
+
+<!-- ───────── FOOTER ───────── -->
+<footer class="foot">
+  <div class="foot__inner">
+    <div class="foot__brand">
+      <span class="foot__mark">C</span>
+      <span class="foot__name">Juwelier Cetin</span>
+      <span class="foot__tag">— Dillenburg seit 2007 —</span>
+    </div>
+
+    <nav class="foot__nav" aria-label="Footer">
+      <a href="index.html#haus">Das Haus</a>
+      <a href="index.html#leistungen">Leistungen</a>
+      <a href="gold.html">Goldankauf</a>
+      <a href="silber.html">Silberankauf</a>
+      <a href="index.html#besuch">Besuch</a>
+    </nav>
+
+    <div class="foot__meta">
+      <p>Hauptstraße 50 · 35683 Dillenburg</p>
+      <p>02771 · 261 005 · info@juwelier-cetin.de</p>
+      <p class="foot__legal">© <span id="yr">2026</span> Juwelier Cetin · Inhaber Mehmet Cetin</p>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js" defer></script>
+<script type="module">
+  import { initBar3D } from './assets/bar3d.js';
+  initBar3D({ container: '#bar3d', variant: 'silver' });
+</script>
+</body>
+</html>

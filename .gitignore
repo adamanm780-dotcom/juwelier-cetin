@@ -1,0 +1,14 @@
+# Design reference bundle (local only)
+.goldbar-ref/
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*~
+
+# Dependency / build
+node_modules/
+dist/
