@@ -232,26 +232,37 @@
 </section>
 
 <!-- ───────── DIAMANT-HIGHLIGHT ───────── -->
-<section class="diamond" id="diamant">
-  <div class="diamond__inner">
-    <figure class="diamond__stage reveal" data-delay="80">
-      <span class="diamond__halo" aria-hidden="true"></span>
-      <img src="assets/puls.png" alt="Diamant — Sinnbild für Klarheit und Wert" class="diamond__img" />
-    </figure>
+<section class="diamond" id="diamant" data-frames="50" data-frame-path="assets/polok/">
+  <div class="diamond__scroller">
+    <div class="diamond__sticky">
+      <div class="diamond__inner">
+        <figure class="diamond__stage" aria-hidden="true">
+          <span class="diamond__halo"></span>
+          <canvas class="diamond__canvas" id="diamondCanvas" width="900" height="675"></canvas>
+          <noscript><img src="assets/polok/025.webp" alt="Verlobungsring mit Diamant" class="diamond__img"/></noscript>
+        </figure>
 
-    <div class="diamond__text">
-      <p class="eyebrow reveal">Der Stein</p>
-      <h2 class="section-title reveal" data-delay="100">
-        Ein Diamant<br/>erzählt <em>die Geschichte</em><br/>bevor ein Wort fällt.
-      </h2>
-      <p class="diamond__lead reveal" data-delay="180">
-        Carat, Colour, Clarity, Cut — die vier C sind uns vertraut. Wir wählen
-        nicht den lautesten Stein, sondern den, der zu Ihnen passt. Lupenrein,
-        ruhig, mit Leben.
-      </p>
-      <div class="diamond__ctas reveal" data-delay="240">
-        <a class="btn btn--primary" href="#besuch"><span>Persönliche Auswahl</span></a>
-        <a class="btn btn--ghost btn--dark" href="#ankauf"><span>Diamanten verkaufen</span></a>
+        <div class="diamond__text">
+          <p class="eyebrow reveal">Der Stein</p>
+          <h2 class="section-title reveal" data-delay="100">
+            Ein Diamant<br/>erzählt <em>die Geschichte</em><br/>bevor ein Wort fällt.
+          </h2>
+          <p class="diamond__lead reveal" data-delay="180">
+            Carat, Colour, Clarity, Cut — die vier C sind uns vertraut. Wir wählen
+            nicht den lautesten Stein, sondern den, der zu Ihnen passt. Lupenrein,
+            ruhig, mit Leben.
+          </p>
+
+          <div class="diamond__progress" aria-hidden="true">
+            <span class="diamond__progress-track"></span>
+            <span class="diamond__progress-fill" id="diamondProgress"></span>
+          </div>
+
+          <div class="diamond__ctas reveal" data-delay="240">
+            <a class="btn btn--primary" href="#besuch"><span>Persönliche Auswahl</span></a>
+            <a class="btn btn--ghost btn--dark" href="#ankauf"><span>Diamanten verkaufen</span></a>
+          </div>
+        </div>
       </div>
     </div>
   </div>

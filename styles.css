@@ -781,13 +781,13 @@ h1 em, h2 em {
   line-height: 1.55;
 }
 
-/* ═══════════════ DIAMANT / puls ═══════════════ */
+/* ═══════════════ DIAMANT / polok scroll-scrub ═══════════════ */
 .diamond {
   background: linear-gradient(180deg, var(--ink) 0%, #0b0906 100%);
   color: var(--ivory);
-  padding: var(--section-py) var(--gutter);
   position: relative;
-  overflow: hidden;
+  overflow: visible;
+  isolation: isolate;
 }
 .diamond::before {
   content: "";
@@ -797,12 +797,28 @@ h1 em, h2 em {
     radial-gradient(ellipse at 20% 30%, rgba(184, 145, 76, 0.12) 0%, transparent 55%),
     radial-gradient(ellipse at 80% 70%, rgba(221, 193, 138, 0.09) 0%, transparent 55%);
   pointer-events: none;
+  z-index: 0;
+}
+/* Tall scroller = scrub travel. Sticky child holds content pinned during scroll. */
+.diamond__scroller {
+  position: relative;
+  height: 260vh;
+  z-index: 1;
+}
+.diamond__sticky {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  display: grid;
+  align-items: center;
+  padding: clamp(4rem, 8vw, 7rem) var(--gutter);
 }
 .diamond__inner {
   max-width: var(--page-max);
   margin: 0 auto;
+  width: 100%;
   display: grid;
-  grid-template-columns: 1fr 1.1fr;
+  grid-template-columns: 1fr 1.05fr;
   gap: clamp(3rem, 6vw, 7rem);
   align-items: center;
   position: relative;
@@ -816,28 +832,55 @@ h1 em, h2 em {
 }
 .diamond__halo {
   position: absolute;
-  inset: 14%;
+  inset: 10%;
   border-radius: 50%;
   background:
-    radial-gradient(circle at 50% 55%, rgba(250, 246, 236, 0.38) 0%, rgba(221, 193, 138, 0.32) 22%, rgba(184, 145, 76, 0.14) 50%, transparent 72%);
-  filter: blur(36px);
-  animation: haloPulse 4.6s var(--ease) infinite;
+    radial-gradient(circle at 50% 55%, rgba(250, 246, 236, 0.32) 0%, rgba(221, 193, 138, 0.26) 28%, rgba(184, 145, 76, 0.12) 55%, transparent 75%);
+  filter: blur(48px);
+  animation: haloPulse 5.4s var(--ease) infinite;
+}
+.diamond__canvas {
+  position: relative;
+  width: 88%;
+  max-width: 620px;
+  aspect-ratio: 4 / 3;
+  height: auto;
+  filter: drop-shadow(0 40px 90px rgba(221, 193, 138, 0.28));
 }
 .diamond__img {
   position: relative;
-  width: 75%;
-  max-width: 520px;
-  filter: drop-shadow(0 30px 80px rgba(221, 193, 138, 0.35));
-  animation: diamondPulse 4.6s var(--ease) infinite;
-  transform-origin: center center;
-}
-@keyframes diamondPulse {
-  0%, 100% { transform: scale(1); filter: drop-shadow(0 30px 80px rgba(221, 193, 138, 0.32)); }
-  50%      { transform: scale(1.035); filter: drop-shadow(0 40px 110px rgba(221, 193, 138, 0.55)); }
+  width: 85%;
+  max-width: 560px;
+  filter: drop-shadow(0 30px 80px rgba(221, 193, 138, 0.32));
 }
 @keyframes haloPulse {
   0%, 100% { opacity: 0.55; transform: scale(1); }
-  50%      { opacity: 0.95; transform: scale(1.12); }
+  50%      { opacity: 0.90; transform: scale(1.10); }
+}
+
+/* Progress bar — visualises the scrub position */
+.diamond__progress {
+  position: relative;
+  display: block;
+  width: min(240px, 60%);
+  height: 1px;
+  margin: 2rem 0 2.2rem;
+}
+.diamond__progress-track,
+.diamond__progress-fill {
+  position: absolute;
+  inset: 0;
+  height: 1px;
+}
+.diamond__progress-track {
+  background: rgba(250, 246, 236, 0.16);
+}
+.diamond__progress-fill {
+  background: linear-gradient(90deg, var(--gold-light), var(--gold));
+  transform-origin: left center;
+  transform: scaleX(0);
+  transition: transform 0.18s linear;
+  box-shadow: 0 0 14px rgba(221, 193, 138, 0.5);
 }
 
 .diamond .eyebrow { color: var(--gold-light); }
@@ -1123,6 +1166,11 @@ h1 em, h2 em {
   .nav__cta   { display: none; }
   .nav__burger { display: block; }
   .nav__inner { grid-template-columns: 1fr auto; }
+
+  /* Diamant-Sektion: kein Sticky-Scrub auf Mobile */
+  .diamond__scroller { height: auto; }
+  .diamond__sticky   { position: static; height: auto; padding: clamp(4rem, 11vw, 6rem) var(--gutter); }
+  .diamond__progress { display: none; }
 
   .brand__grid,
   .diamond__inner,
