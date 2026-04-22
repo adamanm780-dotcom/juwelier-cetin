@@ -96,8 +96,7 @@
   // ─────────── diamond scroll-scrub (50-frame polok sequence)
   const diamondSection = document.getElementById('diamant');
   const diamondCanvas  = document.getElementById('diamondCanvas');
-  const scrubOK = window.matchMedia('(min-width: 901px)').matches;
-  if (diamondSection && diamondCanvas && !prefersReduced && scrubOK) {
+  if (diamondSection && diamondCanvas && !prefersReduced) {
     const total = parseInt(diamondSection.dataset.frames || '50', 10);
     const path  = diamondSection.dataset.framePath || 'assets/polok/';
     const ctx   = diamondCanvas.getContext('2d');
