@@ -35,8 +35,9 @@
   --page-max:   1440px;
   --gutter:     clamp(1.25rem, 4vw, 3rem);
   --section-py: clamp(6rem, 12vw, 11rem);
-  --radius-sm:  2px;
-  --radius-md:  4px;
+  --radius-sm:  999px;   /* pill — buttons, chips, progress fills */
+  --radius-md:  18px;    /* cards, panels, testimonials */
+  --radius-lg:  26px;    /* larger hero-ish surfaces */
 
   --shadow-fine:  0 1px 2px rgba(20, 16, 9, 0.04), 0 6px 24px -8px rgba(20, 16, 9, 0.10);
   --shadow-card:  0 1px 2px rgba(20, 16, 9, 0.04), 0 20px 60px -20px rgba(20, 16, 9, 0.18);
@@ -607,17 +608,15 @@ h1 em, h2 em {
 .services__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 0;
-  border-top: 1px solid var(--line);
-  border-left: 1px solid var(--line);
+  gap: clamp(0.75rem, 1.2vw, 1.2rem);
 }
 .card {
   padding: clamp(2.4rem, 3.5vw, 3.5rem) clamp(1.8rem, 2.5vw, 2.8rem);
-  border-right: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
   position: relative;
   background: var(--ivory);
-  transition: background 0.6s var(--ease), transform 0.6s var(--ease);
+  transition: background 0.6s var(--ease), transform 0.6s var(--ease), box-shadow 0.6s var(--ease), border-color 0.6s var(--ease);
   overflow: hidden;
 }
 .card::after {
@@ -629,9 +628,13 @@ h1 em, h2 em {
   transform: scaleY(0);
   transition: transform 0.7s var(--ease);
   transform-origin: bottom;
+  border-radius: var(--radius-sm);
 }
 .card:hover {
   background: var(--ivory-soft);
+  border-color: var(--line-gold);
+  box-shadow: var(--shadow-fine);
+  transform: translateY(-2px);
 }
 .card:hover::after { transform: scaleY(1); transform-origin: top; }
 
@@ -880,6 +883,7 @@ h1 em, h2 em {
   position: absolute;
   inset: 0;
   height: 1px;
+  border-radius: var(--radius-sm);
 }
 .diamond__progress-track {
   background: rgba(250, 246, 236, 0.16);
@@ -1403,19 +1407,17 @@ h1 em, h2 em {
 .cats__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 0;
-  border-top: 1px solid var(--line);
-  border-left: 1px solid var(--line);
+  gap: clamp(0.75rem, 1.2vw, 1.2rem);
   margin-bottom: clamp(3rem, 5vw, 4rem);
 }
 .cat {
   padding: clamp(2.2rem, 3.2vw, 3rem) clamp(1.8rem, 2.5vw, 2.6rem);
-  border-right: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
   position: relative;
   background: var(--ivory);
   overflow: hidden;
-  transition: background 0.6s var(--ease);
+  transition: background 0.6s var(--ease), border-color 0.6s var(--ease), box-shadow 0.6s var(--ease), transform 0.6s var(--ease);
 }
 .cat::after {
   content: "";
@@ -1426,8 +1428,14 @@ h1 em, h2 em {
   transform: scaleY(0);
   transform-origin: bottom;
   transition: transform 0.7s var(--ease);
+  border-radius: var(--radius-sm);
 }
-.cat:hover { background: var(--ivory-soft); }
+.cat:hover {
+  background: var(--ivory-soft);
+  border-color: var(--line-gold);
+  box-shadow: var(--shadow-fine);
+  transform: translateY(-2px);
+}
 .cat:hover::after { transform: scaleY(1); transform-origin: top; }
 .cat__mark {
   display: inline-block;
@@ -1471,18 +1479,23 @@ h1 em, h2 em {
   margin: 0;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  gap: 0;
-  border-left: 1px solid var(--line);
+  gap: clamp(0.6rem, 1vw, 0.9rem);
 }
 .alloys li {
   padding: 1.3rem 1.2rem;
-  border-right: 1px solid var(--line);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: var(--ivory);
   display: flex;
   flex-direction: column;
   gap: 0.3rem;
-  transition: background 0.4s var(--ease);
+  transition: background 0.4s var(--ease), border-color 0.4s var(--ease), transform 0.4s var(--ease);
 }
-.alloys li:hover { background: var(--ivory-soft); }
+.alloys li:hover {
+  background: var(--ivory-soft);
+  border-color: var(--line-gold);
+  transform: translateY(-1px);
+}
 .alloys strong {
   font-family: var(--serif);
   font-size: 1.8rem;
@@ -1509,25 +1522,32 @@ h1 em, h2 em {
   margin: 0;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 0;
-  border-top: 1px solid var(--line-gold);
+  gap: clamp(0.75rem, 1.2vw, 1.2rem);
 }
 .process__steps li {
-  padding: 2.2rem 1.6rem 0;
-  border-right: 1px solid var(--line);
+  padding: 2.2rem 1.6rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: var(--ivory);
   position: relative;
+  overflow: hidden;
+  transition: background 0.5s var(--ease), border-color 0.5s var(--ease), transform 0.5s var(--ease);
 }
-.process__steps li:last-child { border-right: 0; }
+.process__steps li:hover {
+  background: var(--ivory-soft);
+  border-color: var(--line-gold);
+  transform: translateY(-2px);
+}
 .process__steps li::before {
   content: "";
   position: absolute;
-  top: -1px; left: 0;
-  width: 40%;
+  top: 0; left: 1.6rem; right: 1.6rem;
   height: 2px;
   background: var(--gold);
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.9s var(--ease);
+  border-radius: var(--radius-sm);
 }
 .process__steps li.is-in::before { transform: scaleX(1); }
 
@@ -1616,8 +1636,6 @@ h1 em, h2 em {
   .cats__grid        { grid-template-columns: repeat(2, 1fr); }
   .alloys ul         { grid-template-columns: repeat(3, 1fr); }
   .process__steps    { grid-template-columns: repeat(2, 1fr); }
-  .process__steps li { border-bottom: 1px solid var(--line); padding-bottom: 2rem; }
-  .process__steps li:nth-child(2n) { border-right: 0; }
 }
 
 @media (max-width: 900px) {
@@ -1629,8 +1647,6 @@ h1 em, h2 em {
   .cats__grid { grid-template-columns: 1fr; }
   .alloys ul  { grid-template-columns: repeat(2, 1fr); }
   .process__steps { grid-template-columns: 1fr; }
-  .process__steps li { border-right: 0; border-bottom: 1px solid var(--line); }
-  .process__steps li:last-child { border-bottom: 0; }
 }
 
 @media (max-width: 540px) {
