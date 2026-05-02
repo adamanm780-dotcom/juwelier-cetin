@@ -1,383 +1,524 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-<meta name="theme-color" content="#faf6ec" />
-<title>Juwelier Cetin — Schmuck, Trauringe, Goldankauf · Dillenburg</title>
-<meta name="description" content="Seit bald zwei Jahrzehnten steht Juwelier Cetin in Dillenburg für außergewöhnlichen Schmuck, persönliche Beratung und den seriösen Ankauf von Gold, Silber und Diamanten." />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Juwelier Lemi Mainz – Trauring-Studio in der Römerpassage. Familienbetrieb mit eigener Goldschmiede-Werkstatt. Über 1.500 Trauringe, Sonderanfertigung, Goldankauf & Reparaturen." />
+  <title>Juwelier Lemi — Mainz · Trauringe, Goldschmiede & Schmuck im Herzen der Römerpassage</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Italiana&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="styles.css" />
-<link rel="icon" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='74' font-size='86' font-family='serif' fill='%23c9a96a'>C</text></svg>" />
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
 
-<!-- ───────── NAV ───────── -->
 <header class="nav" id="nav">
-  <div class="nav__inner">
-    <a class="nav__brand" href="#top" aria-label="Juwelier Cetin — Startseite">
-      <span class="nav__brand-mark">C</span>
-      <span class="nav__brand-word">Juwelier&nbsp;Cetin</span>
-    </a>
+  <a href="#top" class="brand" aria-label="Juwelier Lemi Startseite">
+    <span>Juwelier</span>
+    <span class="brand-dot" aria-hidden="true"></span>
+    <em>Lemi</em>
+  </a>
 
-    <nav class="nav__links" aria-label="Hauptnavigation">
-      <a href="#haus">Das Haus</a>
-      <a href="#leistungen">Leistungen</a>
-      <a href="gold.html">Gold</a>
-      <a href="silber.html">Silber</a>
-      <a href="#diamant">Diamanten</a>
-      <a href="#besuch">Besuch</a>
-    </nav>
+  <nav aria-label="Hauptnavigation">
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#trauringe">Trauringe</a></li>
+      <li><a href="#kollektionen">Kollektionen</a></li>
+      <li><a href="#service">Werkstatt</a></li>
+      <li><a href="#standort">Römerpassage</a></li>
+      <li><a href="tel:+4961316388710" class="nav-cta">06131 · 638871</a></li>
+    </ul>
+  </nav>
 
-    <a class="nav__cta" href="#besuch">
-      <span>Termin</span>
-      <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M1 7h11M8 3l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    </a>
-
-    <button class="nav__burger" id="burger" aria-label="Menü öffnen" aria-expanded="false">
-      <span></span><span></span>
-    </button>
-  </div>
-
-  <div class="nav__sheet" id="sheet" aria-hidden="true">
-    <a href="#haus">Das Haus</a>
-    <a href="#leistungen">Leistungen</a>
-    <a href="gold.html">Gold</a>
-    <a href="silber.html">Silber</a>
-    <a href="#diamant">Diamanten</a>
-    <a href="#besuch">Besuch</a>
-    <a class="nav__sheet-cta" href="#besuch">Termin vereinbaren</a>
-  </div>
+  <button class="nav-toggle" aria-label="Menü öffnen" aria-expanded="false" id="navToggle">
+    <span></span><span></span><span></span>
+  </button>
 </header>
 
-<main id="top">
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="hero-marble" aria-hidden="true"></div>
 
-<!-- ───────── HERO ───────── -->
-<section class="hero" aria-label="Juwelier Cetin">
-  <div class="hero__frame">
-    <picture>
-      <source media="(max-width: 740px)" srcset="assets/handyman.png" />
-      <img class="hero__image" src="assets/neuhero.png" alt="Feiner Schmuck auf hellem Podest – inszeniert mit warmem Goldlicht" fetchpriority="high" />
-    </picture>
-    <div class="hero__veil" aria-hidden="true"></div>
-  </div>
+  <div class="wrap-wide hero-layout">
 
-  <div class="hero__content">
-    <p class="hero__eyebrow reveal">Juwelier Cetin · Dillenburg seit 2007</p>
-    <h1 class="hero__title reveal" data-delay="120">
-      Zeit für<br/>das <em>Besondere</em>.
-    </h1>
-    <p class="hero__lead reveal" data-delay="240">
-      Trauringe, Verlobungs&shy;ringe und Fein&shy;schmuck — in Ruhe ausgewählt,
-      sorgfältig angepasst, persönlich übergeben. Ein Familien&shy;haus, das
-      weiß, was ein Moment wert ist.
-    </p>
-    <div class="hero__cta reveal" data-delay="360">
-      <a class="btn btn--primary" href="#leistungen">
-        <span>Kollektion entdecken</span>
-        <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M1 8h12M9 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </a>
-      <a class="btn btn--ghost" href="#besuch">
-        <span>Beratung vereinbaren</span>
-      </a>
-    </div>
-  </div>
-
-  <div class="hero__scroll" aria-hidden="true">
-    <span>Entdecken</span>
-    <i></i>
-  </div>
-</section>
-
-<!-- divider -->
-<div class="divider reveal" aria-hidden="true">
-  <img src="assets/dividing.png" alt="" />
-</div>
-
-<!-- ───────── BRAND / ÜBER UNS ───────── -->
-<section class="brand" id="haus">
-  <p class="eyebrow reveal">Dillenburg · seit 2007</p>
-  <h1 class="brand__headline reveal" data-delay="90">
-    Ein <em>Familien&shy;haus</em> für<br/>
-    außergewöhn&shy;lichen Schmuck.
-  </h1>
-
-  <div class="brand__grid">
-    <div class="brand__col reveal" data-delay="160">
-      <p class="brand__lead">
-        Seit bald zwei Jahrzehnten bewahrt unser Haus in Dillenburg eine seltene
-        Haltung: Wir lassen Schmuck nicht aus dem Katalog fallen. Wir hören zu,
-        wir wählen aus, wir beraten ohne Eile.
-      </p>
-      <p class="brand__lead">
-        Edle Metalle, sorgfältig gewählte Steine und Stücke, die eine Geschichte
-        tragen — das ist unser Maßstab. Für den ersten gemeinsamen Ring. Für den
-        Moment, in dem es gesagt werden soll.
-      </p>
+    <div class="hero-meta-top" data-reveal>
+      <span>Juwelier Lemi</span>
+      <span>Mainz · Römerpassage</span>
+      <span>Familie · Vater & Sohn</span>
     </div>
 
-    <aside class="brand__meta reveal" data-delay="220">
-      <dl>
-        <div><dt>Gründung</dt><dd>2007</dd></div>
-        <div><dt>Fachgeschäft</dt><dd>Dillenburg, Hauptstr. 50</dd></div>
-        <div><dt>Beratung</dt><dd>Persönlich &amp; in Ruhe</dd></div>
-        <div><dt>Inhaber</dt><dd>Mehmet Cetin</dd></div>
-      </dl>
-    </aside>
+    <div class="hero-main">
+      <div class="hero-type">
+        <span class="hero-issue" data-reveal>— Goldschmiedekunst aus Familienhand</span>
+
+        <h1 class="hero-title" data-reveal>
+          <span class="line">Das</span>
+          <span class="line indent"><span class="accent-italic">Versprechen</span></span>
+          <span class="line">einer</span>
+          <span class="line indent"><span class="accent-italic">Tradition.</span></span>
+        </h1>
+
+        <p class="hero-lede" data-reveal>
+          Über 1.500 Trauringe, eine eigene Goldschmiede-Werkstatt und drei Jahrzehnte
+          Erfahrung mit edlen Metallen — mitten in der Römerpassage Mainz.
+          Beratung mit Zeit, Anfertigung in sieben bis zehn Tagen.
+        </p>
+
+        <div class="hero-actions" data-reveal>
+          <a href="#trauringe" class="btn btn-gold">
+            Trauringe entdecken
+            <span class="btn-arrow"></span>
+          </a>
+          <a href="#service" class="btn btn-ghost">
+            Werkstatt erleben
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-foot" data-reveal>
+      <div class="hero-foot-cell">
+        <span class="hero-foot-label">Auswahl</span>
+        <span class="hero-foot-value"><em>1.500+</em></span>
+      </div>
+      <div class="hero-foot-cell">
+        <span class="hero-foot-label">Standort</span>
+        <span class="hero-foot-value">Römer<em>passage</em></span>
+      </div>
+      <div class="hero-foot-cell">
+        <span class="hero-foot-label">Führung</span>
+        <span class="hero-foot-value">Familie <em>Dündar</em></span>
+      </div>
+      <div class="hero-foot-cell">
+        <span class="hero-foot-label">Termin</span>
+        <a href="tel:+4961316388710" class="hero-foot-value" style="color: inherit; text-decoration: none;">06131 · <em>638871</em></a>
+      </div>
+    </div>
+
   </div>
 </section>
 
-<!-- divider -->
-<div class="divider reveal" aria-hidden="true">
-  <img src="assets/dividing.png" alt="" />
-</div>
-
-<!-- ───────── LEISTUNGEN ───────── -->
-<section class="services" id="leistungen">
-  <header class="section-head">
-    <p class="eyebrow reveal">Leistungen</p>
-    <h2 class="section-title reveal" data-delay="90">Sechs Disziplinen,<br/>ein Anspruch: <em>das Beste</em>.</h2>
-  </header>
-
-  <div class="services__grid">
-    <article class="card reveal" data-delay="120">
-      <span class="card__num">01</span>
-      <h3>Trauringe</h3>
-      <p>Gemeinsam ausgewählt, sorgfältig angepasst. Klassisch, modern oder ganz individuell gefertigt — jedes Paar ein eigenes Stück.</p>
-    </article>
-
-    <article class="card reveal" data-delay="180">
-      <span class="card__num">02</span>
-      <h3>Verlobungs&shy;ringe</h3>
-      <p>Der Moment verdient das Richtige. Wir helfen, die Idee in Fassung, Stein und Form zu übersetzen — ruhig, diskret, mit Gefühl.</p>
-    </article>
-
-    <article class="card reveal" data-delay="240">
-      <span class="card__num">03</span>
-      <h3>Fein&shy;schmuck</h3>
-      <p>Ringe, Ketten, Anhänger, Ohrringe und Armbänder in Gold, Weißgold und Platin — für jeden Tag und für die besonderen.</p>
-    </article>
-
-    <article class="card reveal" data-delay="300">
-      <span class="card__num">04</span>
-      <h3>Beratung</h3>
-      <p>Ohne Verkaufsdruck. Wir erklären Qualität, Herkunft und Wert — und finden mit Ihnen ein Stück, das dauerhaft trägt.</p>
-    </article>
-
-    <article class="card reveal" data-delay="360">
-      <span class="card__num">05</span>
-      <h3>Anpassung &amp; Service</h3>
-      <p>Größenänderung, Reinigung, Reparatur, Umarbeitung. Auch für Stücke, die nicht aus unserem Haus stammen.</p>
-    </article>
-
-    <article class="card reveal" data-delay="420">
-      <span class="card__num">06</span>
-      <h3>Exklusive Stücke</h3>
-      <p>Einzelanfertigungen und ausgewählte Raritäten — für Sammler, Liebhaber und alle, die über den Katalog hinausblicken.</p>
-    </article>
+<!-- HERITAGE -->
+<section class="heritage" aria-label="Werte">
+  <div class="heritage-track" id="heritageTrack">
+    <span class="heritage-item"><span class="dot"></span>Trauring-Studio mit über 1.500 Modellen</span>
+    <span class="heritage-item"><span class="dot"></span>Eigene Goldschmiede-Werkstatt</span>
+    <span class="heritage-item"><span class="dot"></span>Sonderanfertigung in 7 – 10 Tagen</span>
+    <span class="heritage-item"><span class="dot"></span>Schmerzfreies Ohrlochstechen</span>
+    <span class="heritage-item"><span class="dot"></span>Goldankauf mit Vertrag</span>
+    <span class="heritage-item"><span class="dot"></span>Familienbetrieb · Vater & Sohn</span>
   </div>
 </section>
 
-<!-- ───────── PARALLAX · PUNKTE ───────── -->
-<section class="parallax" id="ankauf" aria-label="Ankauf von Gold, Silber und Diamanten">
-  <div class="parallax__bg" id="parallaxBg" style="background-image:url('assets/punkte.png')"></div>
-  <div class="parallax__veil" aria-hidden="true"></div>
+<!-- TRAURINGE -->
+<section class="ankauf bg-onyx" id="trauringe">
+  <div class="wrap">
 
-  <div class="parallax__content">
-    <p class="eyebrow eyebrow--on-light reveal">Ankauf</p>
-    <h2 class="parallax__title reveal" data-delay="100">
-      Gold, Silber, <em>Diamanten</em>.<br/>
-      Fair bewertet.
-    </h2>
-    <p class="parallax__lead reveal" data-delay="180">
-      Wer verkauft, möchte verstehen. Wir prüfen vor Ihren Augen, erklären jede
-      Position und machen ein Angebot, das Bestand hat — seit zwei Jahrzehnten
-      ein Grund, warum Kunden wiederkommen.
-    </p>
+    <div class="ankauf-head" data-reveal>
+      <div>
+        <span class="eyebrow">I · Trauring-Studio</span>
+        <h2 class="ankauf-head-title">
+          Ein Ring fürs Leben<br>
+          verdient <em>Zeit zur Wahl.</em>
+        </h2>
+      </div>
+      <p class="lead">
+        Über eintausendfünfhundert Trauringe zur Anprobe — von schlicht klassisch bis
+        Memoire mit Brillant-Pavé. Wir nehmen uns Zeit, vergleichen mit Ihnen in Ruhe
+        und fertigen Wunschmodelle in sieben bis zehn Tagen in der hauseigenen Werkstatt.
+      </p>
+    </div>
 
-    <ul class="pillars">
-      <li class="reveal" data-delay="240">
-        <a class="pillar-link" href="gold.html">
-          <span class="pillars__num">Au</span>
-          <h4>Goldankauf</h4>
-          <p>Legierungen von 333 bis 999 — Schmuck, Münzen, Zahngold, Bruch.</p>
-          <span class="pillar-link__more">Mehr erfahren
-            <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M1 7h11M8 3l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </span>
+    <div class="ankauf-list" data-reveal="stagger">
+
+      <article class="ankauf-row">
+        <span class="ankauf-row-num">No. 01</span>
+        <h3 class="ankauf-row-title">Klassische <em>Trauringe</em></h3>
+        <p class="ankauf-row-desc">
+          Schlicht, zeitlos, perfekt verarbeitet — in Gelb-, Weiß- und Roségold.
+          Auch in Bicolor-Kombinationen, mit oder ohne mattierte Oberflächen.
+        </p>
+        <div class="ankauf-row-tags">
+          <span>750</span><span>585</span><span>Platin</span>
+          <span>Gelbgold</span><span>Weißgold</span><span>Bicolor</span>
+        </div>
+        <a href="#kontakt" class="ankauf-row-cta">
+          Termin <span class="btn-arrow"></span>
         </a>
-      </li>
-      <li class="reveal" data-delay="300">
-        <a class="pillar-link" href="silber.html">
-          <span class="pillars__num">Ag</span>
-          <h4>Silberankauf</h4>
-          <p>Besteck, Schmuck, Münzen, Barren — in jedem Feingehalt.</p>
-          <span class="pillar-link__more">Mehr erfahren
-            <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M1 7h11M8 3l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </span>
+      </article>
+
+      <article class="ankauf-row">
+        <span class="ankauf-row-num">No. 02</span>
+        <h3 class="ankauf-row-title">Memoire <em>& Brillant</em></h3>
+        <p class="ankauf-row-desc">
+          Volle und halbe Memoire-Fassungen mit Brillant-Pavé.
+          Geprüfte Qualität nach 4C — passend zum klassischen Trauring kombinierbar.
+        </p>
+        <div class="ankauf-row-tags">
+          <span>Memoire</span><span>Brillant</span><span>Pavé</span><span>Halbmemoire</span>
+        </div>
+        <a href="#kontakt" class="ankauf-row-cta">
+          Beratung <span class="btn-arrow"></span>
         </a>
-      </li>
-      <li class="reveal" data-delay="360">
-        <a class="pillar-link" href="#diamant">
-          <span class="pillars__num">◇</span>
-          <h4>Diamantankauf</h4>
-          <p>Einzelsteine und gefasster Schmuck — bewertet nach den 4C.</p>
-          <span class="pillar-link__more">Mehr erfahren
-            <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M1 7h11M8 3l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </span>
+      </article>
+
+      <article class="ankauf-row">
+        <span class="ankauf-row-num">No. 03</span>
+        <h3 class="ankauf-row-title">Sonder<em>anfertigung</em></h3>
+        <p class="ankauf-row-desc">
+          Ihre Idee, von uns umgesetzt — ob Erbstück-Umarbeitung, Wunschgravur oder
+          komplett neue Form. Erste Anprobe in sieben bis zehn Tagen.
+        </p>
+        <div class="ankauf-row-tags">
+          <span>Unikat</span><span>Wunschmodell</span><span>7 – 10 Tage</span><span>Werkstatt</span>
+        </div>
+        <a href="#kontakt" class="ankauf-row-cta">
+          Anfragen <span class="btn-arrow"></span>
         </a>
-      </li>
-    </ul>
+      </article>
+
+      <article class="ankauf-row">
+        <span class="ankauf-row-num">No. 04</span>
+        <h3 class="ankauf-row-title">Verlobungs <em>& Solitär</em></h3>
+        <p class="ankauf-row-desc">
+          Klassische Solitäre, moderne Krappenfassungen, Halo-Ringe — beraten von
+          Goldschmiedemeister Kamer Dündar persönlich.
+        </p>
+        <div class="ankauf-row-tags">
+          <span>Solitär</span><span>Halo</span><span>Verlobung</span><span>Brillant</span>
+        </div>
+        <a href="#kontakt" class="ankauf-row-cta">
+          Termin <span class="btn-arrow"></span>
+        </a>
+      </article>
+
+    </div>
+
   </div>
 </section>
 
-<!-- ───────── DIAMANT-HIGHLIGHT ───────── -->
-<section class="diamond" id="diamant" data-frames="50" data-frame-path="assets/polok/">
-  <div class="diamond__scroller">
-    <div class="diamond__sticky">
-      <div class="diamond__inner">
-        <figure class="diamond__stage" aria-hidden="true">
-          <span class="diamond__halo"></span>
-          <canvas class="diamond__canvas" id="diamondCanvas" width="900" height="675"></canvas>
-          <noscript><img src="assets/polok/025.webp" alt="Verlobungsring mit Diamant" class="diamond__img"/></noscript>
-        </figure>
+<!-- KOLLEKTIONEN -->
+<section class="kollektionen bg-marble-soft" id="kollektionen">
+  <div class="wrap-wide">
 
-        <div class="diamond__text">
-          <p class="eyebrow reveal">Der Stein</p>
-          <h2 class="section-title reveal" data-delay="100">
-            Ein Diamant<br/>erzählt <em>die Geschichte</em><br/>bevor ein Wort fällt.
-          </h2>
-          <p class="diamond__lead reveal" data-delay="180">
-            Carat, Colour, Clarity, Cut — die vier C sind uns vertraut. Wir wählen
-            nicht den lautesten Stein, sondern den, der zu Ihnen passt. Lupenrein,
-            ruhig, mit Leben.
+    <div class="kol-intro" data-reveal>
+      <span class="eyebrow">II · Kollektionen</span>
+      <h2>Schmuck, der <em>erzählt.</em></h2>
+      <p class="lead" style="margin-left: auto; margin-right: auto;">
+        Sorgfältig kuratierte Stücke aus Gold und Silber — von alltäglichen Begleitern
+        bis zum Geschenk für besondere Momente. Auch Marken wie Amor und S. Oliver
+        finden Sie bei uns im Studio.
+      </p>
+    </div>
+
+    <div class="kol-gallery" data-reveal="stagger">
+
+      <article class="kol-item kol-item-trauringe">
+        <div class="kol-item-tile">
+          <span class="kol-tile-ornament" aria-hidden="true">✦</span>
+        </div>
+        <div class="kol-item-head">
+          <h3 class="kol-item-title">Trau<em>ringe</em></h3>
+          <span class="kol-item-num">— No. 01</span>
+        </div>
+        <span class="kol-item-sub">Das Versprechen · Gold, Platin, Bicolor</span>
+      </article>
+
+      <article class="kol-item kol-item-ringe">
+        <div class="kol-item-tile">
+          <span class="kol-tile-ornament" aria-hidden="true">◈</span>
+        </div>
+        <div class="kol-item-head">
+          <h3 class="kol-item-title">Ringe</h3>
+          <span class="kol-item-num">— No. 02</span>
+        </div>
+        <span class="kol-item-sub">Verlobung · Solitär · Memoire</span>
+      </article>
+
+      <article class="kol-item kol-item-armbaender">
+        <div class="kol-item-tile">
+          <span class="kol-tile-ornament" aria-hidden="true">◠</span>
+        </div>
+        <div class="kol-item-head">
+          <h3 class="kol-item-title">Arm<em>bänder</em></h3>
+          <span class="kol-item-num">— No. 03</span>
+        </div>
+        <span class="kol-item-sub">Gliederketten · Tennis · Armreifen</span>
+      </article>
+
+      <article class="kol-item kol-item-ohrringe">
+        <div class="kol-item-tile">
+          <span class="kol-tile-ornament" aria-hidden="true">❦</span>
+        </div>
+        <div class="kol-item-head">
+          <h3 class="kol-item-title">Ohr<em>ringe</em></h3>
+          <span class="kol-item-num">— No. 04</span>
+        </div>
+        <span class="kol-item-sub">Stecker · Creolen · Unikate</span>
+      </article>
+
+      <article class="kol-item kol-item-anhaenger">
+        <div class="kol-item-tile">
+          <span class="kol-tile-ornament" aria-hidden="true">☽</span>
+        </div>
+        <div class="kol-item-head">
+          <h3 class="kol-item-title">Anhänger</h3>
+          <span class="kol-item-num">— No. 05</span>
+        </div>
+        <span class="kol-item-sub">Symbole · Erinnerungen · Marken</span>
+      </article>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- WERKSTATT & SERVICE -->
+<section class="service bg-onyx" id="service">
+  <div class="wrap">
+
+    <div class="service-head" data-reveal>
+      <div>
+        <span class="eyebrow">III · Werkstatt & Service</span>
+        <h2>
+          Reparatur,<br>
+          Anfertigung,<br>
+          <em>Goldankauf.</em>
+        </h2>
+      </div>
+      <p class="lead">
+        Goldschmiedemeister Kamer Dündar arbeitet seit über drei Jahrzehnten am
+        Schraubstock. Reparatur, Umarbeitung und Anfertigung passieren bei uns im Haus
+        — meist innerhalb weniger Tage. Persönlich, sauber, ehrlich.
+      </p>
+    </div>
+
+    <div class="service-list" data-reveal="stagger">
+
+      <article class="service-item">
+        <span class="service-num">01</span>
+        <div>
+          <h4>Repara<em>turen</em></h4>
+          <p>
+            Kettenbrüche, defekte Verschlüsse, lose Steine, Ring­weiten­anpassung —
+            in der eigenen Werkstatt, meist in wenigen Tagen zurück.
           </p>
+        </div>
+      </article>
 
-          <div class="diamond__progress" aria-hidden="true">
-            <span class="diamond__progress-track"></span>
-            <span class="diamond__progress-fill" id="diamondProgress"></span>
-          </div>
+      <article class="service-item">
+        <span class="service-num">02</span>
+        <div>
+          <h4>An<em>fertigung</em></h4>
+          <p>
+            Individueller Schmuck nach Ihren Vorstellungen — Trauring, Verlobungsring
+            oder Erbstück-Umarbeitung aus Ihrem eigenen Altgold.
+          </p>
+        </div>
+      </article>
 
-          <div class="diamond__ctas reveal" data-delay="240">
-            <a class="btn btn--primary" href="#besuch"><span>Persönliche Auswahl</span></a>
-            <a class="btn btn--ghost btn--dark" href="#ankauf"><span>Diamanten verkaufen</span></a>
+      <article class="service-item">
+        <span class="service-num">03</span>
+        <div>
+          <h4>Gra<em>vuren</em></h4>
+          <p>
+            Initialen, Daten, kurze Botschaften — sauber graviert in Ringinnenseiten,
+            Anhänger und Armbänder. Persönlich und bleibend.
+          </p>
+        </div>
+      </article>
+
+      <article class="service-item">
+        <span class="service-num">04</span>
+        <div>
+          <h4>Gold<em>ankauf</em></h4>
+          <p>
+            Altgold, Bruchgold und Edelmetall zum tagesaktuellen Kurs — transparent
+            geprüft, mit Vertrag und sofortiger Auszahlung.
+          </p>
+        </div>
+      </article>
+
+      <article class="service-item">
+        <span class="service-num">05</span>
+        <div>
+          <h4>Ohrloch <em>stechen</em></h4>
+          <p>
+            Schmerzfrei, hygienisch und mit ruhiger Hand. Ab vier Jahren möglich
+            (außer samstags). Beratung zur passenden Erstbestückung inklusive.
+          </p>
+        </div>
+      </article>
+
+      <article class="service-item">
+        <span class="service-num">06</span>
+        <div>
+          <h4>Trauring-<em>Beratung</em></h4>
+          <p>
+            In Ruhe vergleichen, in Ruhe entscheiden. Wir nehmen uns für Paare
+            die Zeit, die der wichtigste Ring im Leben verdient.
+          </p>
+        </div>
+      </article>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- STANDORT -->
+<section class="standort bg-onyx" id="standort">
+  <div class="wrap">
+
+    <div class="service-head" style="margin-bottom: var(--s-64);" data-reveal>
+      <div>
+        <span class="eyebrow">IV · Besuchen Sie uns</span>
+        <h2>
+          Im Herzen der<br>
+          <em>Römerpassage.</em>
+        </h2>
+      </div>
+      <p class="lead">
+        Direkt in der Mainzer Innenstadt — Adolf-Kolping-Straße 2, im Erdgeschoss
+        der Römerpassage. Kommen Sie ohne Termin vorbei, oder rufen Sie kurz an.
+        Wir nehmen uns Zeit für Sie.
+      </p>
+    </div>
+
+    <div class="standort-inner" data-reveal>
+
+      <div class="standort-info">
+        <div>
+          <h3>Adolf-Kolping-Str. 2<br><em>Römerpassage Mainz.</em></h3>
+          <address class="standort-addr">
+            <strong>Juwelier Lemi</strong>
+            Adolf-Kolping-Straße 2<br>
+            55116 Mainz<br>
+            Rheinland-Pfalz · Deutschland
+          </address>
+
+          <div class="hours">
+            <div class="hours-row">
+              <span class="hours-day">Mo — Fr</span>
+              <span class="hours-time">10:00 — 18:00</span>
+            </div>
+            <div class="hours-row">
+              <span class="hours-day">Samstag</span>
+              <span class="hours-time">10:00 — 18:00</span>
+            </div>
+            <div class="hours-row">
+              <span class="hours-day">Sonntag</span>
+              <span class="hours-time">Geschlossen</span>
+            </div>
           </div>
         </div>
+
+        <div class="standort-actions">
+          <a href="tel:+4961316388710" class="btn btn-gold">
+            06131 · 638871
+            <span class="btn-arrow"></span>
+          </a>
+          <a href="https://www.google.com/maps/dir/?api=1&destination=Adolf-Kolping-Stra%C3%9Fe+2+55116+Mainz" target="_blank" rel="noopener" class="btn btn-ghost">
+            Route planen
+          </a>
+        </div>
+      </div>
+
+      <div class="standort-map">
+        <iframe
+          src="https://maps.google.com/maps?q=Adolf-Kolping-Stra%C3%9Fe+2+55116+Mainz&t=&z=16&ie=UTF8&iwloc=&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Standort Juwelier Lemi auf Google Maps">
+        </iframe>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- KONTAKT -->
+<section class="kontakt bg-onyx" id="kontakt">
+  <div class="wrap">
+    <div class="kontakt-card" data-reveal>
+      <span class="eyebrow">V · Nächster Schritt</span>
+      <h2>Lassen Sie<em>uns sprechen.</em></h2>
+      <p class="kontakt-sub">
+        Ob erste Trauring-Anprobe, Reparatur-Frage oder ehrliche Goldpreis-Einschätzung
+        — rufen Sie an, schreiben Sie uns oder kommen Sie einfach vorbei.
+        Wir freuen uns auf Sie.
+      </p>
+      <a href="tel:+4961316388710" class="kontakt-phone">06131 · 638871</a>
+      <div style="margin-top: var(--s-48);">
+        <a href="https://www.google.com/maps/search/?api=1&query=Juwelier+Lemi+R%C3%B6merpassage+Mainz" target="_blank" rel="noopener" class="btn btn-gold">
+          Zum Studio
+          <span class="btn-arrow"></span>
+        </a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- divider -->
-<div class="divider divider--dark reveal" aria-hidden="true">
-  <img src="assets/dividing.png" alt="" />
-</div>
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
 
-<!-- ───────── STIMMEN ───────── -->
-<section class="voices" id="stimmen">
-  <header class="section-head section-head--center">
-    <p class="eyebrow reveal">Stimmen</p>
-    <h2 class="section-title reveal" data-delay="90">Kunden,<br/>die <em>wiederkommen</em>.</h2>
-  </header>
+      <div class="footer-brand-col">
+        <div class="brand">
+          <span>Juwelier</span>
+          <span class="brand-dot"></span>
+          <em>Lemi</em>
+        </div>
+        <p class="footer-tagline">
+          Trauring-Studio und Goldschmiede in der Römerpassage Mainz.
+          Familienbetrieb mit eigener Werkstatt — Vater und Sohn an einem Tisch.
+        </p>
+      </div>
 
-  <div class="voices__grid">
-    <figure class="voice reveal" data-delay="120">
-      <blockquote>„Ich wurde selten so liebenswürdig und kompetent beraten. Meine Wünsche wurden angehört — und umgesetzt."</blockquote>
-      <figcaption><span>Daniel Schön</span><em>Verlobungsring</em></figcaption>
-    </figure>
+      <div class="footer-col">
+        <h5>Trauringe</h5>
+        <ul>
+          <li><a href="#trauringe">Klassisch</a></li>
+          <li><a href="#trauringe">Memoire & Brillant</a></li>
+          <li><a href="#trauringe">Sonderanfertigung</a></li>
+          <li><a href="#trauringe">Verlobung & Solitär</a></li>
+        </ul>
+      </div>
 
-    <figure class="voice reveal" data-delay="180">
-      <blockquote>„Ein korrekter, sehr kundenorientierter Juwelier. Habe zum zweiten Mal Edelmetalle ankaufen lassen — kann ich sehr weiter&shy;empfehlen."</blockquote>
-      <figcaption><span>Jürgen Becker</span><em>Goldankauf</em></figcaption>
-    </figure>
+      <div class="footer-col">
+        <h5>Werkstatt</h5>
+        <ul>
+          <li><a href="#service">Reparatur</a></li>
+          <li><a href="#service">Anfertigung</a></li>
+          <li><a href="#service">Goldankauf</a></li>
+          <li><a href="#service">Ohrlochstechen</a></li>
+        </ul>
+      </div>
 
-    <figure class="voice reveal" data-delay="240">
-      <blockquote>„Juwelier meines Vertrauens. Da kann man hingehen, wenn man was braucht — weil man sich einfach sicher fühlt."</blockquote>
-      <figcaption><span>Dilara F.</span><em>Stammkundin</em></figcaption>
-    </figure>
+      <div class="footer-col">
+        <h5>Kontakt</h5>
+        <ul>
+          <li><a href="tel:+4961316388710">06131 · 638871</a></li>
+          <li><a href="mailto:lemimainz@outlook.de">lemimainz@outlook.de</a></li>
+          <li><a href="#standort">Adolf-Kolping-Str. 2<br>55116 Mainz</a></li>
+        </ul>
+      </div>
 
-    <figure class="voice reveal" data-delay="300">
-      <blockquote>„Hervor&shy;ragende Beratung, faire Preise — perfekt. Ein warmherziger Familien&shy;betrieb mit Tradition."</blockquote>
-      <figcaption><span>Hans-Günther S.</span><em>Kunde</em></figcaption>
-    </figure>
-  </div>
-</section>
-
-<!-- divider -->
-<div class="divider reveal" aria-hidden="true">
-  <img src="assets/dividing.png" alt="" />
-</div>
-
-<!-- ───────── BESUCH / KONTAKT ───────── -->
-<section class="visit" id="besuch">
-  <div class="visit__text">
-    <p class="eyebrow reveal">Besuch</p>
-    <h2 class="section-title reveal" data-delay="90">Wann dürfen wir <em>Sie</em><br/>begrüßen?</h2>
-    <p class="visit__lead reveal" data-delay="160">
-      Ein Gespräch braucht Zeit. Kommen Sie vorbei, rufen Sie an oder schreiben
-      Sie uns — wir nehmen uns Ihrer Wünsche in Ruhe an.
-    </p>
-
-    <div class="visit__actions reveal" data-delay="220">
-      <a class="btn btn--primary" href="tel:+492771261005"><span>02771&nbsp;·&nbsp;261 005</span></a>
-      <a class="btn btn--ghost" href="mailto:info@juwelier-cetin.de"><span>Nachricht schreiben</span></a>
-    </div>
-  </div>
-
-  <aside class="visit__card reveal" data-delay="280">
-    <div class="visit__row">
-      <dt>Adresse</dt>
-      <dd>Hauptstraße 50<br/>35683 Dillenburg</dd>
-    </div>
-    <div class="visit__row">
-      <dt>Öffnungszeiten</dt>
-      <dd>
-        Mo – Fr&nbsp;&nbsp; 10:00 – 13:00<br/>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 14:00 – 18:00<br/>
-        Samstag&nbsp; 10:00 – 13:00
-      </dd>
-    </div>
-    <div class="visit__row">
-      <dt>Telefon</dt>
-      <dd><a href="tel:+492771261005">02771 · 261 005</a></dd>
-    </div>
-    <div class="visit__row">
-      <dt>E-Mail</dt>
-      <dd><a href="mailto:info@juwelier-cetin.de">info@juwelier-cetin.de</a></dd>
-    </div>
-  </aside>
-</section>
-
-</main>
-
-<!-- ───────── FOOTER ───────── -->
-<footer class="foot">
-  <div class="foot__inner">
-    <div class="foot__brand">
-      <span class="foot__mark">C</span>
-      <span class="foot__name">Juwelier Cetin</span>
-      <span class="foot__tag">— Dillenburg seit 2007 —</span>
     </div>
 
-    <nav class="foot__nav" aria-label="Footer">
-      <a href="#haus">Das Haus</a>
-      <a href="#leistungen">Leistungen</a>
-      <a href="#ankauf">Ankauf</a>
-      <a href="#diamant">Diamanten</a>
-      <a href="#besuch">Besuch</a>
-    </nav>
-
-    <div class="foot__meta">
-      <p>Hauptstraße 50 · 35683 Dillenburg</p>
-      <p>02771 · 261 005 · info@juwelier-cetin.de</p>
-      <p class="foot__legal">© <span id="yr">2026</span> Juwelier Cetin · Inhaber Mehmet Cetin</p>
+    <div class="footer-bottom">
+      <span>© <span id="year">2026</span> Juwelier Lemi · Alle Rechte vorbehalten</span>
+      <span>
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+      </span>
     </div>
   </div>
 </footer>
 
-<script src="script.js" defer></script>
+<script src="js/main.js" defer></script>
 </body>
 </html>
